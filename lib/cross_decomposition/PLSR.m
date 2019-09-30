@@ -18,7 +18,7 @@ classdef PLSR < BaseEstimator & TransformerMixin & RegressorMixin
     
     methods
         % constructor
-        function obj = PCA_(params)
+        function obj = PLSR(params)
             if nargin>0
                 obj.set_params(params)
             end
