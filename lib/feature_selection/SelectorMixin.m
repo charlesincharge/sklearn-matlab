@@ -24,8 +24,9 @@ classdef SelectorMixin < TransformerMixin
                 warning(['No features were selected: either the data is'...
                          ' too noisy or the selection test too strict.']);
                 X_reduced = zeros(size(X, 1), 0);
+                return
             end
-            assert(numel(mask) == size(X, 1),...
+            assert(numel(mask) == size(X, 2),...
                    'X has a different shape than during fitting');
 
             X_reduced = X(:,mask);
